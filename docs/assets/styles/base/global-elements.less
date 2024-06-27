@@ -1,0 +1,30 @@
+// Global elements
+.g-row {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 20px;
+	max-width: @content-width;
+	min-width: @min-width;
+}
+
+.g-text-left { text-align: left; }
+.g-text-right { text-align: right; }
+.g-text-center { text-align: center; }
+
+.g-clear { .mix-clear; }
+
+.g-scroll-table {
+	overflow: auto;
+	margin: 40px 0;
+}
+
+// Custom
+.g-page {
+	position: relative;
+	padding-top: var(--space-big);
+	min-height: 70vh;
+}
+
+.g-read-block {
+	max-width: @read-width;
+}

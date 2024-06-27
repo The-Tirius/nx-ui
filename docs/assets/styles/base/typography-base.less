@@ -1,0 +1,274 @@
+.g-typography {
+	.mix-clear;
+	
+	position: relative;
+	line-height: 180%;
+	font-size: @text-default;
+	
+	// Anchors
+	a {
+		text-decoration: underline;
+
+		&:hover { text-decoration: none; }
+	}
+
+	ul a,
+	ol a {
+		text-decoration: none;
+
+		&:hover { text-decoration: underline; }
+	}
+	
+
+	// Headings
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 100%;
+
+		font-family: @font-header;
+		font-weight: bold;
+		
+		&:first-child {
+			margin-top: 0;
+		}
+		
+		+ p {
+			margin-top: -8px;
+		}
+
+		em {
+			display: block;
+			font-size: @text-default;
+		}
+	}
+
+	h1 { margin: 3em 0 1.4em 0; font-size: @text-big; }
+	h2 { margin: 2.5em 0 1.4em 0; font-size: 24px; }
+	h3 { margin: 2em 0 1.4em 0; font-size: 20px; }
+	h4 { margin: 1.85em 0 1.25em 0; font-size: @text-medium; }
+	h5 { margin: 1.5em 0 1.15em 0; font-size: inherit; }
+	h6 { margin: 1.5em 0 1.15em 0; font-size: inherit; }
+	
+	// Other
+	img {
+		@margin: 10px;
+		
+		margin-top: @margin;
+		margin-bottom: @margin;
+		max-width: 100%;
+		
+		&.left { float: left; margin-right: @margin; }
+		&.right { float: right; margin-left: @margin; }
+	}
+	
+	em {
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	// Paragraphs, lists
+	p {
+		.mix-clear;
+		
+		margin: 1.5em 0 0.5em 0;
+
+		+ p {
+			margin-top: 0.5em;
+		}
+	}
+	p:first-child { margin-top: 0; }
+	
+	ul, ol { 
+		margin: 0.5em 0;
+		padding-left: 15px;
+		
+		li {
+			position: relative;
+			margin: 0.25em 0;
+		}
+		
+		// Inner lists
+		ul, ol {
+			padding-left: 20px;
+		}
+	}
+	
+	ul > li {
+		&:before {
+			content: '';
+			
+			position: absolute;
+			top: 0.74em;
+			left: -15px;
+			width: 4px;
+			height: 4px;
+			
+			background: @color-secondary;
+		}
+	}
+
+	ul.tag-checks {
+		> li {
+			padding-left: 1em;
+
+			&:before {
+				.mix-icon;
+
+				content: '\f00c';
+				
+				position: absolute;
+				top: 0.3em;
+				left: -15px;
+				width: 1.2em;
+				height: 1.2em;
+				line-height: 1.2em;
+				font-size: 1em;
+				
+				color: @color-secondary;
+				background: transparent;
+			}
+		}
+	}
+
+	ul.tag-square-checks {
+		> li {
+			padding-left: 1em;
+
+			&:before {
+				.mix-icon;
+
+				content: '\f14a';
+				
+				position: absolute;
+				top: 0.91em;
+				margin-top: -0.6em;
+				left: -15px;
+				width: 1.2em;
+				height: 1.2em;
+				line-height: 1.2em;
+				font-size: 1em;
+				
+				color: @color-secondary;
+				background: transparent;
+			}
+		}
+	}
+
+	ol {
+		list-style-type: decimal; 
+		counter-reset: list1;
+	}
+	
+	ol > li {
+		list-style-type: none !important; 
+		list-style-type: decimal; 
+	} 
+	ol > li:before {
+		counter-increment: list1;
+		content: counter(list1) ".";
+		
+		margin-left: -15px;
+		padding-right: 6px;
+		font-family: @font-mono;
+		font-weight: bold;
+		color: @color-secondary;
+
+	}
+	ol ol { counter-reset: list2; }
+	ol ol > li:before {
+		counter-increment: list2;
+		content: counter(list1) "." counter(list2) ".";
+	}
+	ol ol ol { counter-reset: list3; }
+	ol ol ol > li:before {
+		counter-increment: list3;
+		content: counter(list1) "." counter(list2) "." counter(list3) ".";
+	}	
+
+	// Tables
+	table {
+		width: 100%;
+		text-align: left;
+		box-shadow: @bs-0;
+		
+		td, th {
+			padding: 15px;
+			font-size: 16px;
+		}
+		
+
+		tr th:first-child {
+			border-left: none;
+		}
+
+		tr td:first-child {
+			font-weight: bold;
+		}
+		
+		tr td.group-name:first-child {
+			color: @color-secondary;
+		}
+		
+		tr:last-child td {
+			border-bottom: none;
+		}
+	}
+
+	// Forms
+	form {}
+
+	fieldset {}
+	fieldset .fieldContainer {}
+
+	legend {}
+	label {}
+	input {}
+
+	input[type='checkbox'], input[type='radio'] {}
+
+	input[type='submit'], input[type='button'], input[type='reset'] {}
+	select {}
+	select[size='1'] {}
+	optgroup {}
+	option {}
+	textarea {}
+
+	blockquote {
+		display: block;
+		position: relative;
+		margin: 2em 0;
+		padding: 1em 1em 1em 2em;
+		line-height: 1.1;
+		font-style: italic;
+
+		&:before {
+			content: '“';
+	
+			opacity: 0.15;
+			position: absolute;
+			top: 0.75em;
+			left: 0.25em;
+			margin-top: -0.5em;
+			font-size: 3em;
+			line-height: 0.1em;
+		}
+	
+		&:after {
+			content: '';
+	
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			
+			width: 5px;
+	
+			background-color: var(--color-primary);
+		}
+	}
+
+	.signature {
+		display: block;
+		padding-top: 40px;
+		text-align: right;
+	}
+}

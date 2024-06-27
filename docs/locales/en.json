@@ -1,0 +1,22 @@
+{
+	"breadcrumbs.index": "Home",
+	"breadcrumbs.components": "Components",
+	"breadcrumbs.accordion": "Accordion",
+	"breadcrumbs.animated-number": "Animated number",
+	"breadcrumbs.button": "Button",
+	"breadcrumbs.select": "Select",
+	"breadcrumbs.checkbox": "Checkbox",
+	"breadcrumbs.card": "Card",
+	"breadcrumbs.countdown": "Countdown",
+	"breadcrumbs.filter": "Filter",
+	"breadcrumbs.grid": "Grid",
+	"breadcrumbs.impulse-indicator": "Impulse indicator",
+	"breadcrumbs.input": "Input",
+	"breadcrumbs.radio": "Radio",
+	"breadcrumbs.loading": "Loading",
+	"breadcrumbs.tooltip": "Tooltip",
+	"breadcrumbs.static-map": "Static map",
+	"breadcrumbs.notice": "Notice",
+	"breadcrumbs.map": "Map",
+	"breadcrumbs.textarea": "Textarea"
+}

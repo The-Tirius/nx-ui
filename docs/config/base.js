@@ -1,0 +1,3 @@
+module.exports = {
+	configName: 'base'
+};

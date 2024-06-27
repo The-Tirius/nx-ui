@@ -1,0 +1,60 @@
+{
+    "name": "nx-ui",
+    "version": "1.0.0",
+    "description": "Nuxt UI library",
+    "repository": "https://github.com/The-Tirius/nx-ui",
+    "license": "MIT",
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./dist/types.d.ts",
+            "import": "./dist/module.mjs",
+            "require": "./dist/module.cjs"
+        }
+    },
+    "main": "./dist/module.cjs",
+    "types": "./dist/types.d.ts",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "@nuxt/kit": "^3.12.1",
+        "@vuedoc/md": "^4.0.0-beta8",
+        "@vuedoc/parser": "^4.0.0-beta14",
+        "ol": "^9.1.0",
+        "pinia": "^2.1.7"
+    },
+    "devDependencies": {
+        "@nuxt/devtools": "latest",
+        "@nuxt/module-builder": "^0.5.5",
+        "@nuxt/schema": "^3.11.2",
+        "@nuxt/test-utils": "^3.12.0",
+        "@types/node": "^20.12.4",
+        "@vitejs/plugin-vue": "^5.0.5",
+        "@vue/test-utils": "^2.4.6",
+        "changelogen": "^0.5.5",
+        "happy-dom": "^14.12.0",
+        "less": "^3.9.0",
+        "less-loader": "^5.0.0",
+        "nuxt": "^3.12.1",
+        "typescript": "^5.4.5",
+        "vitest": "^1.6.0",
+        "vue-docgen-cli": "^4.79.0"
+    },
+    "resolutions": {
+        "string-width": "4.2.3"
+    },
+    "scripts": {
+        "prepack": "nuxt-module-build build",
+        "dev": "nuxi dev docs",
+        "build": "nuxi build docs",
+        "prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare docs",
+        "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+        "test": "vitest run",
+        "test:watch": "vitest watch",
+        "test:com": "vitest components",
+        "test:genmocks": "node ./src/utils/generateTestMocks.mjs",
+
+        "docs:components": "vue-docgen"
+    }
+}

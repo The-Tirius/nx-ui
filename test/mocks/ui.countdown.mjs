@@ -1,0 +1,1 @@
+export default {"ms":0,"h":"h","m":"m","s":"s"}

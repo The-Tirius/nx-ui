@@ -1,0 +1,1 @@
+export default {"activeColor":"var(--ui-color-text-on-secondary)","activeBg":"var(--ui-color-secondary)"}

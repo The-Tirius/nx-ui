@@ -1,0 +1,22 @@
+# Node
+node_modules
+
+## Yarn
+yarn.lock
+yarn-error.log
+
+# Nuxt
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+
+# Custom
+temp/*
+config.generated.json
+
+# git
+!.gitkeep

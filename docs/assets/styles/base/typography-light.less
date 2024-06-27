@@ -1,0 +1,46 @@
+html.theme-light .g-typography:not(.tag-theme-is-set),
+.g-typography.tag-theme-light {
+	@class-color-text: @theme-light-color-text;
+	@class-color-header-text: @theme-light-color-header-text;
+	@class-color-border: @theme-light-color-border;
+	@class-color-surface: @theme-light-color-surface;
+
+	color: @class-color-text;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: @class-color-header-text;
+	}
+
+	b, strong { color: @class-color-header-text; }
+
+	hr:before {
+		background: @class-color-border;
+	}
+
+	blockquote {
+		color: @theme-light-color-header-text;
+
+		&:before {
+			color:  @theme-light-color-text;
+		}
+	}
+
+	table {
+		th,
+		tr td {
+			border-bottom: 1px solid @theme-light-color-border;
+		}
+
+		td {
+			color: @class-color-text;
+		}
+
+		tr td:first-child {
+			color: @class-color-header-text;
+		}
+
+		tbody tr:hover {
+			background: darken(@class-color-surface, 5%);
+		}
+	}
+}

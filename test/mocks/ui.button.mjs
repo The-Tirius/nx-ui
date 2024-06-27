@@ -1,0 +1,1 @@
+export default {"color":"primary","shape":"","size":"default","variant":"solid"}

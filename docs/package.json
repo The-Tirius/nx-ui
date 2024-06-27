@@ -1,0 +1,34 @@
+{
+	"name": "nuxt3-template",
+	"version": "1.0.2",
+	"description": "Nuxt 3 template",
+	"author": "Pavel Sokolov",
+	"private": true,
+	"scripts": {
+		"build": "cross-env NODE_ENV=dev node ./tools/before-start.js && nuxt build --port=1337",
+		"build:production": "cross-env NODE_ENV=production node ./tools/before-start.js && nuxt build --port=1337",
+		"generate": "cross-env NODE_ENV=dev node ./tools/before-start.js && nuxt generate",
+		"generate:production": "cross-env NODE_ENV=production node ./tools/before-start.js && nuxt generate",
+		"preview": "nuxt preview --host --port=1337",
+		"dev": "cross-env NODE_ENV=dev node ./tools/before-start.js && nuxt dev --host --port=1337",
+		"dev:production": "cross-env NODE_ENV=production node ./tools/before-start.js && nuxt dev --host --port=1337",
+		"start": "cross-env PORT=3001 HOST=localhost node .output/server/index.mjs",
+		"ic:generate": "node ./tools/generate-icon-font.js"
+	},
+	"devDependencies": {
+		"@nuxtjs/color-mode": "^3.3.3",
+		"@nuxtjs/i18n": "^8.3.0",
+		"less": "^3.9.0",
+		"less-loader": "^5.0.0",
+		"nuxt": "^3.12.1",
+		"nuxt-shiki": "^0.3.0",
+		"vite-raw-plugin": "^1.0.2"
+	},
+	"dependencies": {
+		"@pinia/nuxt": "^0.4.11",
+		"cross-env": "^7.0.3",
+		"pinia": "^2.1.6",
+		"svgtofont": "^4.2.0",
+		"vue-code-highlight": "^0.7.8"
+	}
+}

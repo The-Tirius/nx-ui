@@ -1,0 +1,32 @@
+// Text color
+@theme-light-color-header-text: #000;
+@theme-light-color-text: fade(@theme-light-color-header-text, 80%);
+@theme-light-color-gray-text: fade(@theme-light-color-header-text, 60%);
+
+// Background
+@theme-light-color-bg: #fff;
+
+// Surface
+@theme-light-color-surface: #f6f7fb;
+@theme-light-color-surface-lighten-1: lighten(@theme-light-color-surface, 5%);
+@theme-light-color-surface-darken-1: darken(@theme-light-color-surface, 5%);
+
+// Border
+@theme-light-color-border: rgba(0,3,10, 0.08);
+@theme-light-color-border-bolder: rgba(0,3,10, 0.15);
+
+// Box shadows
+@color: 13,72,177;
+@theme-light-bs-0: 0 1px 3px rgba(@color, 0.07), 0 1px 2px rgba(@color, 0.10);
+
+@theme-light-bs-1: 
+	0 0.4px 0.6px rgba(@color, 0.019),
+	0 1px 1.6px rgba(@color, 0.027),
+	0 2.1px 3.2px rgba(@color, 0.033),
+	0 4.4px 6.6px rgba(@color, 0.041),
+	0 12px 18px rgba(@color, 0.06);
+
+@theme-light-bs-2: 0 8px 17px 0 rgba(@color, 0.06), 0 6px 20px 0 rgba(@color, 0.05);
+@theme-light-bs-3: 0 12px 15px 0 rgba(@color, 0.24), 0 17px 50px 0 rgba(@color, 0.19);
+@theme-light-bs-4: 0 16px 28px 0 rgba(@color, 0.22), 0 25px 55px 0 rgba(@color, 0.21);
+@theme-light-bs-5: 0 27px 24px 0 rgba(@color, 0.2), 0 40px 77px 0 rgba(@color, 0.22);

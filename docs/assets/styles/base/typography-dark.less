@@ -1,0 +1,46 @@
+html.theme-dark .g-typography:not(.tag-theme-is-set),
+.g-typography.tag-theme-dark {
+	@class-color-text: @theme-dark-color-text;
+	@class-color-header-text: @theme-dark-color-header-text;
+	@class-color-border: @theme-dark-color-border;
+	@class-color-surface: @theme-dark-color-surface;
+
+	color: @class-color-text;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: @class-color-header-text;
+	}
+
+	b, strong { color: @class-color-header-text; }
+
+	hr:before {
+		background: @class-color-border;
+	}
+
+	blockquote {
+		color: @theme-dark-color-header-text;
+
+		&:before {
+			color:  @theme-dark-color-text;
+		}
+	}
+
+	table {
+		th,
+		tr td {
+			border-bottom: 1px solid @theme-dark-color-border;
+		}
+
+		td {
+			color: @class-color-text;
+		}
+
+		tr td:first-child {
+			color: @class-color-header-text;
+		}
+
+		tbody tr:hover {
+			background: lighten(@class-color-surface, 5%);
+		}
+	}
+}
